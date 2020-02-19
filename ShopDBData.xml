@@ -1,0 +1,195 @@
+<?xml version="1.0" standalone="yes"?>
+<ShopDB>
+  <Customers>
+    <CustomerNo>1</CustomerNo>
+    <FName>Анатолий</FName>
+    <LName>Круковский</LName>
+    <MName>Петрович</MName>
+    <Address1>Лужная 15</Address1>
+    <City>Харьков   </City>
+    <Phone>(092)3212211</Phone>
+    <DateInSystem>2009-11-20T00:00:00+02:00</DateInSystem>
+  </Customers>
+  <Customers>
+    <CustomerNo>2</CustomerNo>
+    <FName>Виктор</FName>
+    <LName>Дурнев</LName>
+    <MName>Викторович</MName>
+    <Address1>Зелинская 10</Address1>
+    <City>Киев      </City>
+    <Phone>(067)4242132</Phone>
+    <DateInSystem>2010-08-03T00:00:00+03:00</DateInSystem>
+  </Customers>
+  <Customers>
+    <CustomerNo>3</CustomerNo>
+    <FName>Зигмунд</FName>
+    <LName>Унакий</LName>
+    <MName>федорович</MName>
+    <Address1>Дихтяревская 5</Address1>
+    <City>Киев      </City>
+    <Phone>(092)7612343</Phone>
+    <DateInSystem>2010-08-17T00:00:00+03:00</DateInSystem>
+  </Customers>
+  <Customers>
+    <CustomerNo>4</CustomerNo>
+    <FName>Виталий</FName>
+    <LName>Левченко</LName>
+    <MName>Викторович</MName>
+    <Address1>Глущенка 5</Address1>
+    <Address2>Драйзера 12</Address2>
+    <City>Киев      </City>
+    <Phone>(053)3456788</Phone>
+    <DateInSystem>2010-08-20T00:00:00+03:00</DateInSystem>
+  </Customers>
+  <Customers>
+    <CustomerNo>5</CustomerNo>
+    <FName>Олег</FName>
+    <LName>Выжлецов</LName>
+    <MName>Евстафьевич</MName>
+    <Address1>Киевская 3</Address1>
+    <Address2>Одесская 8</Address2>
+    <City>Чернигов  </City>
+    <Phone>(044)2134212</Phone>
+    <DateInSystem>2010-09-18T00:00:00+03:00</DateInSystem>
+  </Customers>
+  <Customers>
+    <CustomerNo>20</CustomerNo>
+    <FName>Николай</FName>
+    <LName>Андреев</LName>
+    <MName>Петрович</MName>
+    <Address1>Лужная 9</Address1>
+    <City>Харьков   </City>
+    <Phone>(099)4578596</Phone>
+    <DateInSystem>2009-06-16T00:00:00+03:00</DateInSystem>
+  </Customers>
+  <Orders>
+    <OrderID>1</OrderID>
+    <CustomerNo>1</CustomerNo>
+    <OrderDate>2009-12-28T00:00:00+02:00</OrderDate>
+    <EmployeeID>2</EmployeeID>
+  </Orders>
+  <Orders>
+    <OrderID>2</OrderID>
+    <CustomerNo>3</CustomerNo>
+    <OrderDate>2010-09-01T00:00:00+03:00</OrderDate>
+    <EmployeeID>4</EmployeeID>
+  </Orders>
+  <Orders>
+    <OrderID>3</OrderID>
+    <CustomerNo>5</CustomerNo>
+    <OrderDate>2010-09-18T00:00:00+03:00</OrderDate>
+    <EmployeeID>4</EmployeeID>
+  </Orders>
+  <Orders>
+    <OrderID>4</OrderID>
+    <CustomerNo>1</CustomerNo>
+    <OrderDate>2010-12-10T00:00:00+02:00</OrderDate>
+    <EmployeeID>2</EmployeeID>
+  </Orders>
+  <OrderDetails>
+    <OrderID>1</OrderID>
+    <LineItem>1</LineItem>
+    <ProdID>1</ProdID>
+    <Qty>5</Qty>
+    <UnitPrice>45.0000</UnitPrice>
+    <TotalPrice>225.0000</TotalPrice>
+  </OrderDetails>
+  <OrderDetails>
+    <OrderID>1</OrderID>
+    <LineItem>2</LineItem>
+    <ProdID>4</ProdID>
+    <Qty>5</Qty>
+    <UnitPrice>29.0000</UnitPrice>
+    <TotalPrice>145.0000</TotalPrice>
+  </OrderDetails>
+  <OrderDetails>
+    <OrderID>1</OrderID>
+    <LineItem>3</LineItem>
+    <ProdID>5</ProdID>
+    <Qty>5</Qty>
+    <UnitPrice>25.0000</UnitPrice>
+    <TotalPrice>125.0000</TotalPrice>
+  </OrderDetails>
+  <OrderDetails>
+    <OrderID>2</OrderID>
+    <LineItem>1</LineItem>
+    <ProdID>6</ProdID>
+    <Qty>10</Qty>
+    <UnitPrice>32.0000</UnitPrice>
+    <TotalPrice>320.0000</TotalPrice>
+  </OrderDetails>
+  <OrderDetails>
+    <OrderID>2</OrderID>
+    <LineItem>2</LineItem>
+    <ProdID>2</ProdID>
+    <Qty>15</Qty>
+    <UnitPrice>20.0000</UnitPrice>
+    <TotalPrice>300.0000</TotalPrice>
+  </OrderDetails>
+  <OrderDetails>
+    <OrderID>3</OrderID>
+    <LineItem>1</LineItem>
+    <ProdID>5</ProdID>
+    <Qty>20</Qty>
+    <UnitPrice>26.0000</UnitPrice>
+    <TotalPrice>520.0000</TotalPrice>
+  </OrderDetails>
+  <OrderDetails>
+    <OrderID>3</OrderID>
+    <LineItem>2</LineItem>
+    <ProdID>6</ProdID>
+    <Qty>18</Qty>
+    <UnitPrice>32.0000</UnitPrice>
+    <TotalPrice>576.0000</TotalPrice>
+  </OrderDetails>
+  <OrderDetails>
+    <OrderID>4</OrderID>
+    <LineItem>1</LineItem>
+    <ProdID>2</ProdID>
+    <Qty>10</Qty>
+    <UnitPrice>20.0000</UnitPrice>
+    <TotalPrice>200.0000</TotalPrice>
+  </OrderDetails>
+  <Products>
+    <ProdID>1</ProdID>
+    <Description>LV231 Джинсы                                      </Description>
+    <UnitPrice>45.0000</UnitPrice>
+    <Weight>1</Weight>
+  </Products>
+  <Products>
+    <ProdID>2</ProdID>
+    <Description>GC111 Футболка                                    </Description>
+    <UnitPrice>20.0000</UnitPrice>
+    <Weight>0</Weight>
+  </Products>
+  <Products>
+    <ProdID>3</ProdID>
+    <Description>GC203 Джинсы                                      </Description>
+    <UnitPrice>48.0000</UnitPrice>
+    <Weight>1</Weight>
+  </Products>
+  <Products>
+    <ProdID>4</ProdID>
+    <Description>DG30 Ремень                                       </Description>
+    <UnitPrice>30.0000</UnitPrice>
+    <Weight>1</Weight>
+  </Products>
+  <Products>
+    <ProdID>5</ProdID>
+    <Description>LV12 Обувь                                        </Description>
+    <UnitPrice>26.0000</UnitPrice>
+    <Weight>1</Weight>
+  </Products>
+  <Products>
+    <ProdID>6</ProdID>
+    <Description>GC11 Шапка                                        </Description>
+    <UnitPrice>32.0000</UnitPrice>
+    <Weight>0</Weight>
+  </Products>
+  <Products>
+    <ProdID>18</ProdID>
+    <Description>ER203 Куртка                                      </Description>
+    <UnitPrice>50.0000</UnitPrice>
+    <Weight>0</Weight>
+  </Products>
+</ShopDB>

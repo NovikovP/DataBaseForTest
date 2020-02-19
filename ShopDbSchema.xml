@@ -1,0 +1,80 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="ShopDB" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="ShopDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Customers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerNo" type="xs:int" minOccurs="0" />
+              <xs:element name="FName" type="xs:string" minOccurs="0" />
+              <xs:element name="LName" type="xs:string" minOccurs="0" />
+              <xs:element name="MName" type="xs:string" minOccurs="0" />
+              <xs:element name="Address1" type="xs:string" minOccurs="0" />
+              <xs:element name="Address2" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="Phone" type="xs:string" minOccurs="0" />
+              <xs:element name="DateInSystem" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Orders">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderID" type="xs:int" minOccurs="0" />
+              <xs:element name="CustomerNo" type="xs:int" minOccurs="0" />
+              <xs:element name="OrderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EmployeeID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderID" type="xs:int" minOccurs="0" />
+              <xs:element name="LineItem" type="xs:int" minOccurs="0" />
+              <xs:element name="ProdID" type="xs:int" minOccurs="0" />
+              <xs:element name="Qty" type="xs:int" minOccurs="0" />
+              <xs:element name="UnitPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalPrice" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Products">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProdID" type="xs:int" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="UnitPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Weight" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//Customers" />
+      <xs:field xpath="CustomerNo" />
+    </xs:unique>
+    <xs:unique name="Orders_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//Orders" />
+      <xs:field xpath="OrderID" />
+    </xs:unique>
+    <xs:unique name="Products_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//Products" />
+      <xs:field xpath="ProdID" />
+    </xs:unique>
+    <xs:keyref name="Products_OrderDetails" refer="Products_Constraint1">
+      <xs:selector xpath=".//OrderDetails" />
+      <xs:field xpath="ProdID" />
+    </xs:keyref>
+    <xs:keyref name="Orders_OrderDetails" refer="Orders_Constraint1">
+      <xs:selector xpath=".//OrderDetails" />
+      <xs:field xpath="OrderID" />
+    </xs:keyref>
+    <xs:keyref name="Customers_Orders" refer="Constraint1">
+      <xs:selector xpath=".//Orders" />
+      <xs:field xpath="CustomerNo" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
